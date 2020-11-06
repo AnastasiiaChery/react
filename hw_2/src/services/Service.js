@@ -3,12 +3,12 @@ export class UserService {
 
 	_url = 'https://jsonplaceholder.typicode.com';
 
-	async getAllUsers() {
-		return await fetch(`${this._url}/users`).then(value => value.json());
+	async getAllPosts() {
+		return await fetch(`${this._url}/posts`).then(value => value.json());
 	}
 
-	getUserById(id) {
-		return fetch(`${this._url}/users/${id}`).then(value => value.json());
+	getPostById(id) {
+		return fetch(`${this._url}/posts/${id}`).then(value => value.json());
 	}
 
 

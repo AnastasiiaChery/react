@@ -1,4 +1,4 @@
-import Users from './components/users/Users'
+import Posts from './components/users/Posts'
 import './App.css';
 
 
@@ -7,7 +7,7 @@ function App(props) {
   
   return (
     <div>
-      <Users/>
+      <Posts/>
     </div>
   );
 
