@@ -1,4 +1,4 @@
-import Posts from './components/users/Posts'
+import Posts from './components/posts/Posts'
 import './App.css';
 
 
