@@ -9,9 +9,6 @@ export default  function User(props) {
 		Email: {email}
 		<div>
 			<button > Chose</button>
-
-			
-
 		</div>
 		<hr></hr>
 	</div>)
