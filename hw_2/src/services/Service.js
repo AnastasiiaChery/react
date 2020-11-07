@@ -10,6 +10,9 @@ export class UserService {
 	getPostById(id) {
 		return fetch(`${this._url}/posts/${id}`).then(value => value.json());
 	}
+	async getAllComments() {
+		return await fetch(`${this._url}/comments`).then(value => value.json());
+	}
 
 
 }
