@@ -1,32 +1,31 @@
 import React, {Component} from 'react';
-import {UserService} from '../../services/Service';
 import User from '../user/User';
 
-class Users extends Component {
-
-	_userService = new UserService;
-
-  state={users: []};
+class Users extends Component  {
 
 
-componentDidMount(){
- this._userService.getAllUsers().then(value =>{
- this.setState({users: value})
- });
-}
+	constructor(props) {
+		super(props);
+	}
 
 	render() {
+		let users = this.props.items;
+		let oneUserByIdUsers = this.props.getOneUserByIdUsers;
 		return (
-			<div>
-                 {
-					this.state.users.map(value => (<User
-						 item={value}
-						 key={value.id}/>))
-				 }
+				<div>
+				{
+					users.map(value => (
+						<User
+							item={value}
+							key={value.id}
+							getOneUserByIdUser={oneUserByIdUsers}
+						/>
+					))
+				}
 			</div>
-		);
+		)
 	}
-	
+
 }
 
 export default Users;

@@ -11,5 +11,8 @@ export class UserService {
 		return fetch(`${this._url}/users/${id}`).then(value => value.json());
 	}
 
+	getAllPosts() {
+		return fetch(`${this._url}/posts`).then(value => value.json());
+	}
 
 }

@@ -1,5 +1,6 @@
 export default  function User(props) {
 
+	let oneUserByIdUser = props.getOneUserByIdUser;
 	let {id, name, username, email} = props.item;
 
 	return(<div>
@@ -8,7 +9,7 @@ export default  function User(props) {
 		User name: {username} <br></br>
 		Email: {email}
 		<div>
-			<button > Chose</button>
+			<button onClick={() => oneUserByIdUser(id)}> Chose</button>
 		</div>
 		<hr></hr>
 	</div>)
