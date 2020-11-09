@@ -29,31 +29,11 @@ export class App extends Component{
       let filter = this.state.userItems.filter(value => value.id === id);
       console.log(filter);
       this.setState({item: filter[0]});
-// this.allPost()
+
 
   }
 
-  // allPost(){
-  //    let posts = []
-  // this._userService.getAllPosts(value=>{ this.posts=value})
-  // console.log(posts)
-  // // this.postItems=posts
-  // // console.log(this.postItems)
-
-  //   }
-
-  
-
-
-//   getPostByIdApp = (id) => {
-//     let filterPost = this.state.postItems.filter(value => value.id === id);
-//     console.log(filter);
-//     this.setState({item: filter[0]});
-
-
-    
-      
-
+ 
   
   render() {
     let {userItems} = this.state;
