@@ -11,35 +11,23 @@ class Posts extends Component {
 	item: null,
 	comments: []};
 
-	// states={comments: [],
-	// 	item: null};
 
-	useId=0;
+	   constructor(props) {
+		super(props);
+		this.Comments = React.createRef();
+	  }
 	
-
 
 componentDidMount(){
  this._postService.getAllPosts().then(value =>{
  this.setState({posts: value})
  });
-
-
 }
 
 
-// getPostsByIdApp = (id) => {this.useId=id
-// 		console.log(this.useId)
-	
-// }
-
-getPostsByIdApp = (id) => {
-	let filter = this.state.posts.filter(value => value.id === id);
-	console.log(filter);
-	this.setState({item: filter});
-
-};
-
-
+      getPostsByIdApp= (id) => {
+	 this.Comments.current.updateTable(id);
+      };
 
 
 	render() {

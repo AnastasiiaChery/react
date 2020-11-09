@@ -14,12 +14,6 @@ class Comments extends Component {
 	item: null};
 	
 	
-	constructor(props) {
-		super(props);	
-		// this.handleClick = this.getPostsByIdApp(this);    	
-	}
-
-
 	componentDidMount(){ 
      this._postService.getAllComments().then(value =>{
 	this.setState({comment: value})
@@ -27,8 +21,15 @@ class Comments extends Component {
   }
 
 
-  handleClick(){console.log('jgkhv')}
+  updateTable= (id) =>  {
+    console.log("Update Table");
+  }
   
+  // updateTable = (id) => {
+// 	let filter = this.state.comment.filter(value => value.id === id);
+// 	console.log(filter);
+// 	this.setState({item: filter});
+// };
 
 
   render() {
