@@ -11,9 +11,7 @@ export class App extends Component{
   state={userItems: [],
     item: null  
   }
-  statePost={postItems: [],
-    item: null  
-  }
+ 
     
     
     async  componentDidMount(){
